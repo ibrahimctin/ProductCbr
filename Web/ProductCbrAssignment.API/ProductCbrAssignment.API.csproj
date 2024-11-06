@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>05faffbd-1706-4cfc-8bf0-a0e8c4198837</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\ProductCbrAssignment.Application\ProductCbrAssignment.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\ProductCbrAssignment.Infrastructure\ProductCbrAssignment.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
